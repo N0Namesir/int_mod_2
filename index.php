@@ -1,7 +1,35 @@
 <?php
-include_once 'config/conexion.php'; 
-include 'header.php';
-echo 'index';
+include "config/conexion.php"; // Asegura que la conexión es correcta
+session_start();
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nombre_usuario = $_POST["nombre_usuario"];
+    $password = $_POST["password"];
+
+    $sql = "SELECT id_usuario, nombre_usuario, password, rol FROM usuarios WHERE nombre_usuario = ?";
+    $stmt = $conn->prepare($sql); // Ahora usando $conn en lugar de $pdo
+    $stmt->bind_param("s", $nombre_usuario);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    
+    if ($result->num_rows > 0) {
+        $usuario = $result->fetch_assoc();
+        if (password_verify($password, $usuario["password"])) {
+            $_SESSION["usuario"] = $usuario["nombre_usuario"];
+            $_SESSION["rol"] = $usuario["rol"];
+            
+            header("Location: " . ($usuario["rol"] == "admin" ? "public/admin/admin.php" : "public/index.php"));
+            exit();
+        } else {
+            echo "Contraseña incorrecta.";
+        }
+    } else {
+        echo "Usuario no encontrado.";
+    }
+
+    $stmt->close();
+    $conn->close();
+}
 ?>
 
 <!DOCTYPE html>
@@ -9,18 +37,18 @@ echo 'index';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienvenido</title>
-    <!-- Bootstrap CDN -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <!-- Estilos personalizados -->
-    <link rel="stylesheet" href="styles/index.css">
+    <title>Inicio de Sesión</title>
 </head>
+<body>
+    <h2>Iniciar Sesión</h2>
+    <form action="index.php" method="POST">
+        <label for="nombre_usuario">Nombre de Usuario:</label>
+        <input type="text" id="nombre_usuario" name="nombre_usuario" required>
 
-<body class="d-flex justify-content-center align-items-center vh-100">
-    <div class="card text-center">
-        <h1>🌟 index 🌟</h1>
-        <p>este es el index</p>
-        <a href="dashboard.php" class="btn btn-primary mt-3">Ir al Dashboard</a>
-    </div>
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" required>
+
+        <input type="submit" value="Iniciar Sesión">
+    </form>
 </body>
 </html>

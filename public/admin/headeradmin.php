@@ -1,5 +1,5 @@
 <header>
-    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="public/styles/header.css">
     <!-- Barra de navegación Bootstrap con fixed-top -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary px-3">
         <a class="navbar-brand fw-bold" href="index.php">TecnoMundo</a>
@@ -20,6 +20,10 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="public/compras">Compras</a>
+                </li>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="public/admin/h_registro.php">registrar</a>
                 </li>
             </ul>
 
