@@ -18,8 +18,8 @@ echo 'index';
 
 <body class="d-flex justify-content-center align-items-center vh-100">
     <div class="card text-center">
-        <h1>🌟 ¡Bienvenido a Mi Proyecto! 🌟</h1>
-        <p>Este es un index básico con Bootstrap y CSS personalizado.</p>
+        <h1>🌟 index 🌟</h1>
+        <p>este es el index</p>
         <a href="dashboard.php" class="btn btn-primary mt-3">Ir al Dashboard</a>
     </div>
 </body>

@@ -13,13 +13,13 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <a class="nav-link active" href="public/productos.php">Productos</a>
+                    <a class="nav-link active" href="public/productos">Productos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="public/ventas.php">Ventas</a>
+                    <a class="nav-link" href="public/ventas">Ventas</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="public/compras.php">Compras</a>
+                    <a class="nav-link" href="public/compras">Compras</a>
                 </li>
             </ul>
 
