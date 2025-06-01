@@ -1,15 +1,16 @@
 <?php
-include_once '../../../config/conexion.php'; 
-include 'header.php';
-require_once "../../../config/verificar_admin.php"; // Bloquea usuarios no admin
-
 session_start(); // Inicia o mantiene la sesión
 
 // Verifica si el usuario está autenticado
 if (!isset($_SESSION["usuario"])) {
-    header("Location: login.html"); // Redirigir si no ha iniciado sesión
+    header("Location: ../../../index.php"); // Redirigir si no ha iniciado sesión
     exit();
 }
+include_once '../../../config/conexion.php'; 
+include_once 'header.php';
+require_once "../../../config/verificar_admin.php"; // Bloquea usuarios no admin
+
+
 
 
 // Ejecutar la consulta para obtener los productos, ordenados por nombre
