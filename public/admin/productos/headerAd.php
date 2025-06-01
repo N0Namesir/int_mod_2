@@ -2,10 +2,10 @@
 
 <header>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../../styles/header.css">
     <!-- Barra de navegación Bootstrap con fixed-top -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary px-3">
-        <a class="navbar-brand fw-bold" href="index.php">TecnoMundo</a>
+        <a class="navbar-brand fw-bold" href="../index.php">TecnoMundo</a>
 
         <!-- Botón para móvil -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
