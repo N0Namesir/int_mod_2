@@ -1,6 +1,14 @@
 <?php
 include_once '../config/conexion.php'; 
 include 'header.php';
+session_start(); // Inicia o mantiene la sesión
+
+// Verifica si el usuario está autenticado
+if (!isset($_SESSION["usuario"])) {
+    header("Location: login.html"); // Redirigir si no ha iniciado sesión
+    exit();
+}
+
 echo 'index';
 ?>
 

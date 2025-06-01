@@ -1,9 +1,19 @@
 <?php
+// mantener la sesión y verificar autenticación
+
+session_start(); // Inicia o mantiene la sesión
+
+// Verifica si el usuario está autenticado
+if (!isset($_SESSION["usuario"])) {
+    header("Location: login.html"); // Redirigir si no ha iniciado sesión
+    exit();
+}
+
 include "../../config/conexion.php";
 include_once 'headerAd.php';
 require_once "../../config/verificar_admin.php"; // Bloquea usuarios no admin
 
-//include_once '../../header.php';
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nombre_usuario = $_POST["nombre_usuario"];
     $password = password_hash($_POST["password"], PASSWORD_DEFAULT); // Hashear la contraseña
