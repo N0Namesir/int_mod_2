@@ -30,7 +30,7 @@ $ventas = $result->fetch_all(MYSQLI_ASSOC);
     <br>
     <div class="container mt-5">
         <h1>Lista de Ventas</h1>
-        <a href="crear_venta.php" class="btn btn-success mb-3">Registrar Nueva Venta</a>
+        <a href="agregar_venta.php" class="btn btn-success mb-3">Registrar Nueva Venta</a>
         
         <?php if (count($ventas) > 0): ?>
             <table class="table table-striped table-bordered">
