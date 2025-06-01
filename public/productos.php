@@ -1,7 +1,7 @@
 <?php
+session_start(); // Inicia o mantiene la sesión
 include_once '../config/conexion.php';
 include 'header.php';
-session_start(); // Inicia o mantiene la sesión
 
 // Verifica si el usuario está autenticado
 if (!isset($_SESSION["usuario"])) {
@@ -13,7 +13,7 @@ if (!isset($_SESSION["usuario"])) {
 
 
 // Ejecutar la consulta para obtener los productos, ordenados por nombre
-$query = "SELECT * FROM productos ORDER BY codigo_product ASC";
+$query = "SELECT * FROM productos ORDER BY codigo_producto ASC";
 $result = $conn->query($query);
 
 $productos = [];
@@ -51,12 +51,12 @@ if ($result && $result->num_rows > 0) {
                         <th>Código</th>
                         <th>Nombre</th>
                         <th>Descripción</th>
-                        <th>Precio Costo ($)</th>
+                        <!-- <th>Precio Costo ($)</th> -->
                         <th>Precio Venta ($)</th>
                         <th>Marca</th>
                         <th>Categoría</th>
                         <th>Stock Actual</th>
-                        <th>Acciones</th>
+                        <!-- <th>Acciones</th> -->
                     </tr>
                 </thead>
                 <tbody>
@@ -65,20 +65,20 @@ if ($result && $result->num_rows > 0) {
                             <td><?php echo $producto['codigo_producto']; ?></td>
                             <td><?php echo $producto['nombre']; ?></td>
                             <td><?php echo $producto['descripcion']; ?></td>
-                            <td><?php echo $producto['precio_costo']; ?></td>
+                            <!-- <td><?php //echo $producto['precio_costo']; ?></td> -->
                             <td><?php echo $producto['precio_venta']; ?></td>
                             <td><?php echo $producto['marca']; ?></td>
                             <td><?php echo $producto['categoria']; ?></td>
                             <td><?php echo $producto['stock_actual']; ?></td>
-                            <td>
-                                <!-- <a href="ver.php?codigo=<?php echo $producto['codigo_producto']; ?>" class="btn btn-info btn-sm">Ver</a>
-                                <a href="editar.php?codigo=<?php echo $producto['codigo_producto']; ?>" class="btn btn-warning btn-sm">Editar</a>
-                                <a href="eliminar.php?codigo=<?php echo $producto['codigo_producto']; ?>" 
+                            <!-- <td>
+                               <a href="ver.php?codigo=<?php //echo $producto['codigo_producto']; ?>" class="btn btn-info btn-sm">Ver</a>
+                                <a href="editar.php?codigo=<?php //echo $producto['codigo_producto']; ?>" class="btn btn-warning btn-sm">Editar</a>
+                                <a href="eliminar.php?codigo=<?php //echo $producto['codigo_producto']; ?>" 
                                    class="btn btn-danger btn-sm" 
                                    onclick="return confirm('¿Estás seguro de eliminar este producto?');">
                                    Eliminar
-                                </a> -->
-                            </td>
+                                </a> 
+                            </td> -->
                         </tr>
                     <?php endforeach; ?>
                 </tbody>

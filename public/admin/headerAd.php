@@ -28,7 +28,7 @@
                     <a class="nav-link" href="registro.php">registrar</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../../config/cerrar.php">cerrar sesion</a>
+                    <a class="nav-link" href="../../../config/cerrar.php">cerrar sesion</a>
                 </li>
             </ul>
 
