@@ -8,6 +8,8 @@ if (!isset($_SESSION["usuario"])) {
 }
 
 include_once '../../config/conexion.php';
+require_once "../../config/verificar_admin.php"; // Bloquea usuarios no admin
+
 include_once 'headerAd.php';
 
 echo 'ere amin'

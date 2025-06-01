@@ -1,6 +1,3 @@
-<?php
-require_once "../../config/verificar_admin.php"; // Bloquea usuarios no admin
-?>
 
 <header>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
@@ -18,17 +15,20 @@ require_once "../../config/verificar_admin.php"; // Bloquea usuarios no admin
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <a class="nav-link active" href="../productos">Productos</a>
+                    <a class="nav-link" href="productos">Productos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../ventas">Ventas</a>
+                    <a class="nav-link" href="ventas">Ventas</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../compras">Compras</a>
+                    <a class="nav-link" href="compras">Compras</a>
                 </li>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="registro.php">registrar</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../../config/cerrar.php">cerrar sesion</a>
                 </li>
             </ul>
 

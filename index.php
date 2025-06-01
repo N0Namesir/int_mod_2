@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION["usuario"] = $usuario["nombre_usuario"];
             $_SESSION["rol"] = $usuario["rol"];
             
-            header("Location: " . ($usuario["rol"] == "admin" ? "public/admin/" : "public/index.php"));
+            header("Location: " . ($usuario["rol"] == "admin" ? "public/admin/" : "public/productos.php"));
             exit();
         } else {
             echo "Contraseña incorrecta.";
