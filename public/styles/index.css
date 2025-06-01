@@ -1,0 +1,28 @@
+/* Estilos personalizados para mejorar la estructura con Bootstrap */
+
+body {
+    background-color: #2d70b3; /* Color de fondo claro */
+}
+
+.card {
+    max-width: 400px;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.card h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bff; /* Azul de Bootstrap */
+}
+
+.card p {
+    font-size: 16px;
+    color: #6c757d; /* Texto secundario */
+}
+
+.btn-primary {
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 10px 20px;
+}

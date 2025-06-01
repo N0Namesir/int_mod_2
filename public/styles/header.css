@@ -1,0 +1,13 @@
+/* Estilos específicos para el header */
+header {
+    width: 100%;
+    position: fixed; /* Fija el header en la parte superior */
+    top: 0;
+    left: 0;
+    z-index: 4000; /* Asegura que esté por encima del contenido */
+}
+
+/* Ajustar el contenido para evitar que se solape con el header */
+body {
+    padding-top: 70px; /* Ajusta este valor si el header es más alto */
+}
