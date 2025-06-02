@@ -1,6 +1,6 @@
 <?php
-include "config/conexion.php"; // Asegura que la conexión es correcta
 session_start();
+include "config/conexion.php"; // Asegura que la conexión es correcta
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nombre_usuario = $_POST["nombre_usuario"];
@@ -38,17 +38,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio de Sesión</title>
+    <link rel="stylesheet" href="login.css">
 </head>
 <body>
-    <h2>Iniciar Sesión</h2>
-    <form action="index.php" method="POST">
-        <label for="nombre_usuario">Nombre de Usuario:</label>
-        <input type="text" id="nombre_usuario" name="nombre_usuario" required>
+    <div class="login-container">
+        <h2>Iniciar Sesión</h2>
+        <form action="index.php" method="POST">
+            <label for="nombre_usuario">Nombre de Usuario:</label>
+            <input type="text" id="nombre_usuario" name="nombre_usuario" required>
 
-        <label for="password">Contraseña:</label>
-        <input type="password" id="password" name="password" required>
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required>
 
-        <input type="submit" value="Iniciar Sesión">
-    </form>
+            <input type="submit" value="Iniciar Sesión">
+        </form>
+    </div>
 </body>
 </html>
