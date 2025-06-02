@@ -8,7 +8,7 @@ if (!isset($_SESSION["usuario"])) {
 }
 
 include_once '../../config/conexion.php';
-require_once "../../config/verificar_admin.php"; // Bloquea usuarios no admin
+require_once "../../config/verificar_admin.php"; // Bloquea usuarios no adminx
 
 include_once 'headerAd.php';
 
@@ -31,8 +31,8 @@ echo 'ere amin'
         Alteraciones perjudiciales o deliberadas podrían tener consecuencias legales.
     </div>
 
-    <div class="alert alert-warning text-center">
-        <strong>⚠️ Aviso de del personal de frontend:</strong>
+    <div class="alert alert-info text-center">
+        <strong> Aviso de del personal de frontend:</strong>
         No vamos a hacer nada, porque no tenemos ni idea de como se hace, pero si quieres puedes hacerlo tú.
     </div>
 
