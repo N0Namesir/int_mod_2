@@ -17,7 +17,7 @@ if (isset($_GET['buscar'])) {
 // Construir la consulta en función del criterio de búsqueda
 if (!empty($buscar)) {
     // Se buscan coincidencias en el nombre y en el código de producto
-    $sql = "SELECT * FROM productos WHERE nombre LIKE ? OR codigo_producto LIKE ? ORDER BY nombre ASC";
+    $sql = "SELECT * FROM productos WHERE nombre LIKE ? OR codigo_producto LIKE ? ORDER BY codigo_producto ASC"; //estaaa
     $stmt = $conn->prepare($sql);
     $param = "%" . $buscar . "%";
     $stmt->bind_param("ss", $param, $param);
