@@ -24,6 +24,7 @@ $productos = $result->fetch_all(MYSQLI_ASSOC);
 <div class="container mt-5">
   <h1>Lista de Productos</h1>
   <a href="agregar_producto.php" class="btn btn-success mb-3">Agregar Producto</a>
+  <a href="informe_productos.php" class="btn btn-success mb-3">generar informe</a>
   <?php if(count($productos) > 0): ?>
     <table class="table table-striped table-bordered">
       <thead>

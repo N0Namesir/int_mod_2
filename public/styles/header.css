@@ -1,5 +1,6 @@
 /* Estilos específicos para el header */
 header {
+    background-color: blue;
     width: 100%;
     position: fixed; /* Fija el header en la parte superior */
     top: 0;
