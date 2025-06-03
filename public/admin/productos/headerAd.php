@@ -34,10 +34,10 @@
             </ul>
 
             <!-- Barra de búsqueda -->
-            <form class="d-flex" action="buscar.php" method="GET">
+            <!-- <form class="d-flex" action="buscar.php" method="GET">
                 <input class="form-control me-2" type="search" name="query" placeholder="Buscar..." aria-label="Buscar">
                 <button class="btn btn-outline-light" type="submit">🔍</button>
-            </form>
+            </form> -->
         </div>
     </nav>
 </header>

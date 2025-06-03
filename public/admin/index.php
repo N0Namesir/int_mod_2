@@ -25,7 +25,7 @@ echo 'ere amin'
 </head>
 
 <body>
-    <div class="alert alert-warning text-center">
+    <div class="alert alert-info text-center">
         <strong>⚠️ Aviso de Seguridad:</strong>
         Recuerda que cualquier modificación en el sistema debe hacerse con responsabilidad.
         Alteraciones perjudiciales o deliberadas podrían tener consecuencias legales.

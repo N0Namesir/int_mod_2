@@ -26,7 +26,7 @@ if (!empty($buscar)) {
     $result = $stmt->get_result();
 } else {
     // Si no hay búsqueda, se muestran todos los productos
-    $sql = "SELECT * FROM productos ORDER BY nombre ASC";
+    $sql = "SELECT * FROM productos ORDER BY codigo_producto ASC";
     $result = $conn->query($sql);
 }
 
